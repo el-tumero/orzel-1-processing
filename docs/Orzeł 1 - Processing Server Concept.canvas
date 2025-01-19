@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"dbdacc6ba1d40254","type":"text","text":"WebSocket Server","x":-109,"y":-200,"width":196,"height":62},
+		{"id":"ea4cc5bdff869a6a","type":"text","text":"Celem tego tworu jest odbieranie wiadomości UDP z ORŁA-1, wstępne parsowanie wiadomości pod narysowanie na frotcie","x":180,"y":-249,"width":250,"height":160,"color":"3"},
+		{"id":"41202fdbd7ef8a97","type":"text","text":"Frontend (Canvas)","x":-109,"y":0,"width":196,"height":60},
+		{"id":"1a25890e9a70e3f8","type":"text","text":"Przetwarza dane, rysuje je jako punkty (rysuje w czasie rzeczywistym)","x":180,"y":-27,"width":250,"height":114,"color":"3"},
+		{"id":"c89604f8de6f5ad3","type":"text","text":"Pomyśleć nad opcją cachowania punktów z danego pomiaru a następnie puszczania przez nie funkcji wygładzającej/ zamiany punktów na odcinki","x":-460,"y":-275,"width":250,"height":212,"color":"2"},
+		{"id":"27c33eca6d3a753b","type":"text","text":"Do kminki","x":-780,"y":-230,"width":250,"height":60},
+		{"id":"efe0c0899545f133","x":-136,"y":-466,"width":250,"height":146,"color":"2","type":"text","text":"Stworzyć MOCK Orła-1 tzn. wysyłać do WebSocket servera przykładowe pomiary (scenario (pod testy)"}
+	],
+	"edges":[
+		{"id":"c95683799df67526","fromNode":"ea4cc5bdff869a6a","fromSide":"left","toNode":"dbdacc6ba1d40254","toSide":"right"},
+		{"id":"d76f39c6e9a28901","fromNode":"dbdacc6ba1d40254","fromSide":"bottom","toNode":"41202fdbd7ef8a97","toSide":"top","label":"wysyła dane"},
+		{"id":"5b2ba6a4079e0eb6","fromNode":"1a25890e9a70e3f8","fromSide":"left","toNode":"41202fdbd7ef8a97","toSide":"right"},
+		{"id":"d807d7e93be3f579","fromNode":"c89604f8de6f5ad3","fromSide":"right","toNode":"dbdacc6ba1d40254","toSide":"left"},
+		{"id":"de643135c9e27f26","fromNode":"27c33eca6d3a753b","fromSide":"right","toNode":"c89604f8de6f5ad3","toSide":"left"},
+		{"id":"6bed9925f895d5b2","fromNode":"efe0c0899545f133","fromSide":"bottom","toNode":"dbdacc6ba1d40254","toSide":"top"}
+	]
+}

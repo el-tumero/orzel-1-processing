@@ -1,0 +1,12 @@
+{
+  "name": "orzel-1-processing",
+  "version": "1.0.0",
+  "description": "Orzeł 1 - Processing server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
