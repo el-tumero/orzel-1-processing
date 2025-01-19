@@ -7,6 +7,7 @@ canvas.width = 500
 canvas.height = 500
 
 const POINT_SIZE = 5
+const SCALE_SIZE = 5
 
 ctx.translate(canvas.width / 2, canvas.height / 2)
 ctx.scale(1, -1)
@@ -27,8 +28,8 @@ socket.on("connect", () => {
 const drawPoint = (drawMessage, ctx) => {
   ctx.fillStyle = drawMessage.color
   ctx.fillRect(
-    drawMessage.point.x * POINT_SIZE,
-    drawMessage.point.y * POINT_SIZE,
+    drawMessage.point.x * SCALE_SIZE,
+    drawMessage.point.y * SCALE_SIZE,
     POINT_SIZE,
     POINT_SIZE
   )

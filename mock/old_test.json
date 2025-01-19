@@ -1,0 +1,54 @@
+[
+  {
+    "Heading": 30.0,
+    "Distance, Variation": [10, 0, 20, 2, 30, 0]
+  },
+  {
+    "Heading": 30.0,
+    "Distance, Variation": [10, 0, 18, 2, 30, 0]
+  },
+  {
+    "Heading": 30.0,
+    "Distance, Variation": [10, 0, 16, 2, 30, 0]
+  },
+  {
+    "Heading": 30.0,
+    "Distance, Variation": [10, 0, 14, 2, 30, 0]
+  },
+  {
+    "Heading": 30.0,
+    "Distance, Variation": [10, 0, 12, 2, 30, 0]
+  },
+  {
+    "Heading": 30.0,
+    "Distance, Variation": [10, 0, 10, 2, 30, 0]
+  },
+  {
+    "Heading": 75.0,
+    "Distance, Variation": [12, 2, 12, 5, 25, 5]
+  },
+  {
+    "Heading": 120.0,
+    "Distance, Variation": [10, 0, 20, 8, 20, 5]
+  },
+  {
+    "Heading": 120.0,
+    "Distance, Variation": [10, 0, 18, 2, 20, 0]
+  },
+  {
+    "Heading": 120.0,
+    "Distance, Variation": [10, 0, 16, 2, 20, 0]
+  },
+  {
+    "Heading": 120.0,
+    "Distance, Variation": [10, 0, 14, 2, 20, 0]
+  },
+  {
+    "Heading": 120.0,
+    "Distance, Variation": [10, 0, 12, 2, 20, 0]
+  },
+  {
+    "Heading": 120.0,
+    "Distance, Variation": [10, 0, 10, 2, 20, 0]
+  }
+]
