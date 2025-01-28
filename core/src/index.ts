@@ -2,8 +2,14 @@ import express, { Express, Request, Response } from "express"
 import { createServer } from "node:http"
 import eagleService from "./eagleService"
 import { Server } from "socket.io"
+import { clearCache } from "./cache"
+import cors from "cors"
 
 const app = express()
+
+app.use(cors({
+  origin: "*"
+}))
 
 const PORT = 8081
 const server = createServer(app)
@@ -15,6 +21,11 @@ io.on("connection", (socket) => {
 
 app.get("/health", (req, res) => {
   res.send("healthy")
+})
+
+app.get("/clear", (req, res) => {
+  clearCache()
+  res.send("ok")
 })
 
 eagleService(io)

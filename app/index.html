@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orzel-1 Processing App</title>
-  </head>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-    body {
-      font-family: "Noto Sans Mono", serif;
-      background-color: rgb(29, 33, 36);
-      color: rgb(220, 220, 220);
-    }
-  </style>
-  <body>
-    <h1>Orzel-1 Processing App</h1>
-    <canvas
-      id="display"
-      width="500"
-      height="500"
-      style="border: 1px white solid"
-    ></canvas>
-    <p>Orzel-1 position:</p>
-    <p id="position"></p>
 
-    <script
-      src="https://cdn.socket.io/4.8.1/socket.io.min.js"
-      integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orzel-1 Processing App</title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+  body {
+    font-family: "Noto Sans Mono", serif;
+    background-color: rgb(29, 33, 36);
+    color: rgb(220, 220, 220);
+  }
+</style>
+
+<body>
+  <h1>Orzel-1 Processing App</h1>
+  <canvas id="display" width="500" height="500" style="border: 1px white solid"></canvas>
+  <p>Orzel-1 position:</p>
+  <p id="position"></p>
+  <button id="clear">Restart</button>
+
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+    integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+    crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
 </html>

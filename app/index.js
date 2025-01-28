@@ -1,6 +1,7 @@
 const socket = io("ws://localhost:8081")
 const canvas = document.getElementById("display")
 const position = document.getElementById("position")
+const clear = document.getElementById("clear")
 const ctx = canvas.getContext("2d")
 
 canvas.width = 500
@@ -34,3 +35,11 @@ const drawPoint = (drawMessage, ctx) => {
     POINT_SIZE
   )
 }
+
+clear.addEventListener("click", async () => {
+  const response = await fetch("http://127.0.0.1:8081/clear")
+  if (response.ok) {
+    console.log("Cache cleared!")
+  }
+  ctx.clearRect(-250, -250, 500, 500)
+})

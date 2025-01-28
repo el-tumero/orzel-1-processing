@@ -20,3 +20,11 @@ export const addPositionToCache = (point: Point) => {
 export const getLatestPoint = (direction: EagleSensorDirection) => {
   return pointCache[direction][pointCache[direction].length - 1]
 }
+
+export const clearCache = () => {
+  positionCache.length = 0
+  pointCache.front.length = 0
+  pointCache.left.length = 0
+  pointCache.right.length = 0
+  positionCache.push({x: 0, y: 0})
+}
