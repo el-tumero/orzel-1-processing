@@ -6,9 +6,9 @@ import { EagleData, EagleMessage, EagleSensorDirection } from "./EagleMessage"
  * @throws {Error}
  */
 export const parseMessageFromEagle = (
-  msg: Buffer<ArrayBufferLike>
+  msg: string
 ): EagleData => {
-  const data = JSON.parse(msg.toString())
+  const data = msg as any
   if (
     !data["Heading"] ||
     !data["Distance, Variation"] ||

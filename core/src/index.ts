@@ -3,9 +3,12 @@ import { createServer } from "node:http"
 import eagleService from "./eagleService"
 import { Server } from "socket.io"
 import { clearCache } from "./cache"
+import bodyParser from "body-parser"
 import cors from "cors"
 
 const app = express()
+
+app.use(bodyParser.json())
 
 app.use(cors({
   origin: "*"
@@ -28,7 +31,7 @@ app.get("/clear", (req, res) => {
   res.send("ok")
 })
 
-eagleService(io)
+eagleService(io, app)
 
 server.listen(PORT, () => {
   console.log(`[CORE/HTTP+WS] Server running at port ${PORT}`)

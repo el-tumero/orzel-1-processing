@@ -1,21 +1,21 @@
-import dgram from "dgram"
+
 import { createDrawMessage, parseMessageFromEagle } from "./parser/parser"
 import { addPositionToCache, getLatestPosition } from "./cache"
 import { calculatePoint, calculatePosition } from "./algo/points"
 import { Server } from "socket.io"
+import { Express } from "express"
 
-const eagleService = (io: Server) => {
-  const socket = dgram.createSocket("udp4")
-  const PORT = 8082
+const eagleService = (io: Server, app: Express) => {
+  // const socket = dgram.createSocket("udp4")
+  // const PORT = 8082
 
-  // TODO: Point Cache! -> moze byc linked list or smth (cache poziom wyżej, express potrzebuje dostepu do cache)
 
-  socket.on("message", (msg, rinfo) => {
-    console.log(
-      `[CORE/EAGLE] Received message from ${rinfo.address}:${rinfo.port}`
-    )
+  app.all("*/params", (req, res) => {
+    // console.log(
+    //   `[CORE/EAGLE] Received message from ${rinfo.address}:${rinfo.port}`
+    // )
     try {
-      const eagleData = parseMessageFromEagle(msg)
+      const eagleData = parseMessageFromEagle(req.body)
       console.log(
         `[CORE/EAGLE] Received Eagle data: ${JSON.stringify(eagleData)}`
       )
@@ -55,10 +55,14 @@ const eagleService = (io: Server) => {
     } catch (error) {
       console.error(`[CORE/EAGLE] Error parsing message: ${error}`)
     }
+
+    res.send("Hello World!")
   })
 
-  console.log(`[CORE/EAGLE] Eagle Service running at ${PORT}`)
-  socket.bind(PORT)
+
+
+  // console.log(`[CORE/EAGLE] Eagle Service running at ${PORT}`)
+  // socket.bind(PORT)
 }
 
 export default eagleService

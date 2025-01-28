@@ -40,8 +40,8 @@ export const getSensorAngleRadians = (
     case "front":
       return heading
     case "left":
-      return heading - Math.PI / 2
+      return heading - Math.PI / 6
     case "right":
-      return heading + Math.PI / 2
+      return heading + Math.PI / 6
   }
 }
